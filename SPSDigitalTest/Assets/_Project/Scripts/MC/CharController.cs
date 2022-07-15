@@ -14,7 +14,7 @@ public class CharController : MonoBehaviour
             Vector3 delta = Input.mousePosition - _mousePreviousPosition;
             delta = delta.normalized;
             if (firstTouch) firstTouch = false;
-            else _MC.Move(new Vector3(delta.x * -_velocity*Time.deltaTime, -1, -2*delta.y * _velocity* Time.deltaTime));
+            else _MC.Move(new Vector3(delta.x * -_velocity*Time.deltaTime, -1, -delta.y * _velocity* Time.deltaTime));
         }
         else firstTouch = true;
         _mousePreviousPosition = Input.mousePosition;

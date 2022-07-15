@@ -24,7 +24,8 @@ public class Kick : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.collider.transform.CompareTag("Environment")) return;
-        collision.collider.GetComponent<Rigidbody>().AddForceAtPosition(_parent.transform.rotation * Vector3.forward * kickForce, collision.GetContact(0).point);
+        _foot.enabled = false;
+        collision.collider.GetComponent<Rigidbody>().AddForceAtPosition(_parent.transform.rotation * Vector3.forward * kickForce+Vector3.up*100, collision.GetContact(0).point);
     }
 
 }

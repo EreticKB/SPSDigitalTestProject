@@ -18,7 +18,8 @@ public class EnemyController : MonoBehaviour
         if (other.transform.CompareTag("Foot")) KillRagdoll(other.transform.position);
         if (other.transform.CompareTag("Environment")|| other.transform.CompareTag("Enemy"))
         {
-            if (other.GetComponent<Rigidbody>().velocity.sqrMagnitude > 2.25f) _ragdoll.EnableRagdoll();
+            Rigidbody othersBody = other.GetComponent<Rigidbody>();
+            if (othersBody.velocity.sqrMagnitude > 2.25f && !othersBody.isKinematic) _ragdoll.EnableRagdoll();
         }
     }
 }
