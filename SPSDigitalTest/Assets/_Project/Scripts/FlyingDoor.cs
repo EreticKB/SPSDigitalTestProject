@@ -21,6 +21,6 @@ public class FlyingDoor : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Foot")) _disable = true;
+     // if (collision.collider.CompareTag("Foot")) _disable = true;
     }
 }

@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 6556073924777833681}
-  radius: 0
+  _scanRadius: 16
+  _scanTimer: 1
+  _throwingItemSpawnTime: 0.35
+  _throwingItem: {fileID: 3941306585345550938, guid: 31821a9c58717714682d3ddedc0f9e6f, type: 3}
+  _parent: {fileID: 7562624992526432233}
 --- !u!1001 &3909730627936680334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -203,5 +207,10 @@ GameObject:
 --- !u!95 &6556073924777833681 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7834571431436619103, guid: 0b028325e8e40624da56ca3e59db3cee, type: 3}
+  m_PrefabInstance: {fileID: 3909730627936680334}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7562624992526432233 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6823498888337821287, guid: 0b028325e8e40624da56ca3e59db3cee, type: 3}
   m_PrefabInstance: {fileID: 3909730627936680334}
   m_PrefabAsset: {fileID: 0}
